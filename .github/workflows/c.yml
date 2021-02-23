@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: go to 1.25
-    - run: cd 1.25/
+      run: cd 1.25/
     - name: make 1.25
       run: make Makefile build
     - name: make check
