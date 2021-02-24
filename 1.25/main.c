@@ -4,7 +4,7 @@
 
 void palindrome(int x) {
 	int i = 0, dec = x, flag = 1;
-	int* bin = (int*) malloc(((log(x) / log(2)) + 1) * sizeof(int));
+	int* bin = (int*) malloc(((int)(log(x) / log(2)) + 1) * sizeof(int));
 
 	while (x >= 1) {
 		bin[i] = x % 2;
@@ -30,11 +30,12 @@ void palindrome(int x) {
 int main() {
 	int m, i;
 	scanf("%d", &m);
-	if (m >= 1) {
-		printf("1--1 \n");
-		for (i = 3; i <= m; i += 2) {
-			palindrome(i);
-		}
+	if (m < 1) {
+		exit(1);
+	}
+	printf("1--1 \n");
+	for (i = 3; i <= m; i += 2) {
+		palindrome(i);
 	}
 	return 0;
 }
