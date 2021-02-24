@@ -1,10 +1,10 @@
-name: C_Cl
+name: C1
 
 on:
   push:
-    branches: [ master ]
+    branches: [ firstLab ]
   pull_request:
-    branches: [ master ]
+    branches: [ firstLab ]
 
 jobs:
   build:
@@ -16,7 +16,3 @@ jobs:
     - name: go to 1.25 and build
       working-directory: ./1.25
       run: make Makefile build
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
