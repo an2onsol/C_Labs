@@ -1,0 +1,25 @@
+name: C1
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - '1.25/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - '1.25/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: go to 1.25 and build
+      working-directory: ./1.25
+      run: make Makefile build
+    - name: test
+      working-directory: ./1.25
+      run: make Makefile test
