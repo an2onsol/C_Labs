@@ -1,5 +1,2 @@
-main.c:31:9: style: The scope of the variable 'i' can be reduced. [variableScope]
- int m, i;
-        ^
 nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
 
