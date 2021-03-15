@@ -17,12 +17,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: build, run, test
+    - name: build and test
       working-directory: ./2.1.25
       run: make Makefile all
-    - name: valgrind
-      working-directory: ./2.1.25
-      run: make Makefile valgrind
     - name: linter
       working-directory: ./2.1.25
       run: make Makefile linter
