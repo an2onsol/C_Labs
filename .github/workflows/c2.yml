@@ -20,7 +20,4 @@ jobs:
     - name: build and test
       working-directory: ./2.1.25
       run: make Makefile all
-    - name: linter
-      working-directory: ./2.1.25
-      run: make Makefile linter
     
