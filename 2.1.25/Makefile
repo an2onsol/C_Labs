@@ -1,10 +1,10 @@
-all: build test
+all: build mtest
 
 build: main.c
 	gcc main.c -o main -lm -std=c89
 run:
 	./main
-test:
+mtest:
 	gcc -o test -Dmain=_main main.c test.c
 	./test
 valgrind:

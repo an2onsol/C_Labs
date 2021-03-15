@@ -1,6 +1,5 @@
 #include "main.h"
 #include <assert.h>
-
 int test() {
     structure x = reduction(130, 260);
     assert(x.ch == 1 && x.zn == 2);
