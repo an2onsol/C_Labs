@@ -1,10 +1,14 @@
-name: C2
+name: C2.1
 
 on:
   push:
     branches: [ master ]
+    paths:
+      - '2.1.25/**'
   pull_request:
     branches: [ master ]
+    paths:
+      - '2.1.25/**'
 
 jobs:
   build:
@@ -12,4 +16,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+    - uses: actions/checkout@v2
+    - name: build, run, test
+      working-directory: ./2.1.25
+      run: make Makefile all
+    - name: valgrind
+      working-directory: ./2.1.25
+      run: make Makefile valgrind
+    - name: linter
+      working-directory: ./2.1.25
+      run: make Makefile linter
+    
