@@ -1,14 +1,14 @@
-name: C2.1
+name: C2.2
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '2.6/**'
+      - '2.2.6/**'
   pull_request:
     branches: [ master ]
     paths:
-      - '2.6/**'
+      - '2.2.6/**'
 
 jobs:
   build:
@@ -18,6 +18,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: build and test
-      working-directory: ./2.6
+      working-directory: ./2.2.6
       run: make all
     
