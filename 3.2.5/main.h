@@ -1,0 +1,1 @@
+int kingUnderAttack(int **board, int kx, int ky);
