@@ -1,0 +1,23 @@
+name: C2.2
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - '3.2.5/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - '3.2.5/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: build and test
+      working-directory: ./3.2.5
+      run: make all
+    
