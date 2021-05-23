@@ -1,0 +1,29 @@
+name: C3.2
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - '4.1.5/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - '4.1.5/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: install valgrind and cpplint
+      run: |
+        sudo apt install -y valgrind
+        sudo pip install cpplint
+
+    - name: build and test
+      working-directory: ./4.1.5
+      run: make all
+    
