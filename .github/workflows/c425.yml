@@ -21,7 +21,6 @@ jobs:
     - name: install valgrind and cpplint
       run: |
         sudo apt install -y valgrind
-        sudo pip install cppcheck
 
     - name: build and test
       working-directory: ./4.2.5
