@@ -1,0 +1,1 @@
+char* func(const char* str);
