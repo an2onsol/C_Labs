@@ -1,4 +1,4 @@
-all: build mtest valgrind linter
+all: build mtest valgrind 
 
 build: main.c
 	gcc main.c -o main -lm 
@@ -8,7 +8,7 @@ mtest:
 	gcc -o test -Dmain=_main main.c test.c -lm
 	./test
 valgrind:
-	valgrind --leak-check=full ./main
+	valgrind ./main
 linter:
 	cpplint *.c
 	
