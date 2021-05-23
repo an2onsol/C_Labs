@@ -25,7 +25,7 @@ int main() {
 	char temp[128];
 	word* db =(word*)malloc(100 * sizeof(word));
 	FILE *fin = fopen("input.txt", "r");
-	while(fscanf(fin, "%s", &temp) == 1){
+	while(fscanf(fin, "%128s", temp) == 1){
 		flag = 1;
 		for(j = 0; j < i; j++){
 			if (strcm(db[j].text, temp)){
