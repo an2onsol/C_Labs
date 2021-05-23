@@ -1,4 +1,4 @@
-all: build mtest valgrind linter
+all: build mtest valgrind
 
 build: main.c
 	gcc main.c -o main -lm 
