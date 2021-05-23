@@ -1,7 +1,7 @@
 all: build mtest valgrind linter
 
 build: main.c
-	gcc main.c -o main -lm -std=c89
+	gcc main.c -o main -lm 
 run:
 	./main
 mtest:
