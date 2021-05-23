@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
-#include <string.h>
 
 
 void AddService(Service* serv, int number){
@@ -78,7 +77,6 @@ int main(){
     if(serv == NULL){
 		exit(2);
 	}
-    memset(serv, 0, sizeof(Service));
     serv->serviceTime = rand() % 100;
     serv->next = NULL;
     serv->prev = NULL;
