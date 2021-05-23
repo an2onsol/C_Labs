@@ -8,7 +8,7 @@ mtest:
 	gcc -o test -Dmain=_main main.c test.c -lm
 	./test
 valgrind:
-	valgrind -s ./main
+	valgrind -s --track-origins=yes ./main
 linter:
 	cppcheck -q --enable=all --inconclusive main.c
 	
