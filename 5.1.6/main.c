@@ -78,7 +78,7 @@ int main(){
     if(serv == NULL){
 		exit(2);
 	}
-    memset(serv, 0, sizeof(serv));
+    memset(serv, 0, sizeof(Service));
     serv->serviceTime = rand() % 100;
     serv->next = NULL;
     serv->prev = NULL;
