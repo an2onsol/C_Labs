@@ -1,0 +1,33 @@
+name: C6.2
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - '6.2.23/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - '6.2.23/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: install valgrind
+      run: |
+        sudo apt install -y valgrind
+
+    - name: build and test
+      working-directory: ./6.2.23
+      run: make all
+    - name: coverage
+      uses: codecov/codecov-action@v1
+      with:
+        files: |
+          ./6.2.23/Manager.c.gcov
+    
