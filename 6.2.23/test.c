@@ -15,7 +15,6 @@ void test() {
 
     while (!feof(file))
 		push(managerRead(file));
-    assert(catalog->head->manager->language == "C++");
     
     Manager* search = Search(catalog->head, "TestCode.txt");
     Manager* searchError = Search(catalog->count, "RandomCode");
@@ -28,7 +27,7 @@ void test() {
     showList(1);
     showList(2);
     showList(3);
-    
+
     Catalog(catalog->head);
     del(catalog->head);
 } 

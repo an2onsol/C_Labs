@@ -7,7 +7,7 @@ run:
 mtest:
 	gcc -ftest-coverage -fprofile-arcs -O0 -o test test.c Manager.c
 	./test
-	gcov -abcfu Dormitory.cpp
+	gcov -abcfu Manager.cpp
 valgrind:
 	valgrind --leak-check=full ./main
 linter:
