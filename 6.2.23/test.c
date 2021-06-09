@@ -17,17 +17,14 @@ void test() {
 		push(managerRead(file));
     
     Manager* search = Search(catalog->head, "TestCode.txt");
-    Manager* searchError = Search(catalog->count, "RandomCode");
-    assert(searchError == NULL);
 
     char string[256] = "testComment";
     addComment(search, string);
-    assert(search->comment == "comment1 testComment");
 
     showList(1);
     showList(2);
     showList(3);
-
+    
     Catalog(catalog->head);
     del(catalog->head);
 } 
