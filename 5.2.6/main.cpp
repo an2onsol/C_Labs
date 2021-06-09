@@ -12,6 +12,6 @@ int main() {
   std::cout << "Enter char\n";
   char ch;
   std::cin >> ch;
-  std::cout << "There are " <<tree.count(ch) << " under this node";
+  std::cout << tree.count(ch);
   return 0;
 }

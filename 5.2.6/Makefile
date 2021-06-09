@@ -1,4 +1,4 @@
-all: build mtest valgrind
+all: build mtest
 
 build: main.c
 	g++ main.cpp -o main -lm 
