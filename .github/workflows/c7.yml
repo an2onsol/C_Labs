@@ -13,14 +13,10 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: install valgrind
-      run: |
-        sudo apt install -y valgrind
 
     - name: build and test
       working-directory: ./6.2.23
