@@ -1,6 +1,6 @@
 all: build mtest
 
-build: main.c
+build: main.cpp
 	g++ main.cpp -o main -lm 
 run:
 	./main
